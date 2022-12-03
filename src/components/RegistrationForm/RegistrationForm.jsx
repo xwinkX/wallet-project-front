@@ -26,11 +26,11 @@ const validationSchema = Yup.object().shape({
     .email('E-mail is invalid')
     .min(10, 'E-mail must contain at least 10 characters')
     .max(63)
-    .matches(/^.{1}[A-Za-z0-9._-]{1,}@[A-Za-z0-9]+.\w{2,3}$/, {
+    .matches(/^.{1}[A-Za-z0-9._-]{1,}@[A-Za-z0-9]+.\w+$/, {
       message: 'Name section of email must have at least 2 characters',
       excludeEmptyString: true,
     })
-    .matches(/^[A-Za-z0-9.]{1}[A-Za-z0-9._-]{1,}@[A-Za-z0-9]+.\w{2,3}$/, {
+    .matches(/^[A-Za-z0-9.]{1}[A-Za-z0-9._-]{1,}@[A-Za-z0-9]+.\w+$/, {
       message: 'Email must not start with "-"',
       excludeEmptyString: true,
     })
